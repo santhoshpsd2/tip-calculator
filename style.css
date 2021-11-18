@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+}
+
+main {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.logo {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.mainsection {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  main {
+    width: 800px;
+  }
+
+  .mainsection {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.myform {
+  position: relative;
+}
+
+label {
+  font-weight: 700;
+  color: hsl(184, 14%, 56%);
+}
+
+.dollar {
+  position: absolute;
+  left: 0.5rem;
+  top: 2.2rem;
+}
+
+.person {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.9rem;
+}
+
+input {
+  border: none;
+  width: 100%;
+  background-color: hsl(185, 41%, 84%, 0.3);
+  text-align: right;
+  font-family: inherit;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.billamt {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+
+.persons {
+  padding: 0.5rem;
+}
+
+.tipbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4%;
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.tipbuttons > * {
+  cursor: pointer;
+  flex: 1 1 48%;
+  margin-bottom: 12px;
+  color: #fff;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.3rem;
+  font-family: inherit;
+  font-size: 24px;
+  border: none;
+}
+
+.percent.active {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.percent:hover {
+  color: #000;
+  background-color: hsl(172, 67%, 45%);
+}
+
+.tipnumber {
+  font-size: inherit;
+  text-align: center;
+  background-color: hsl(185, 41%, 84%, 0.3);
+  color: #000;
+}
+
+.tipnumber:focus {
+  background-color: hsl(172, 67%, 45%);
+  color: #fff;
+}
+
+.tipsection {
+  padding: 2rem 1rem 1rem;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 1rem;
+  margin-top: 2rem; /*needs to be changed in desktop site*/
+}
+
+@media (min-width: 800px) {
+  .billsection {
+    max-width: 45%;
+  }
+
+  .tipsection {
+    min-width: 50%;
+    margin-top: 0;
+  }
+
+  .tipbuttons > * {
+    flex: 1 1 30%;
+    font-size: 16px;
+    padding: 0.2rem;
+  }
+}
+
+.tipamount,
+.tipperperson {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.pertext {
+  font-weight: 400;
+  color: hsl(184, 14%, 56%);
+}
+
+.price {
+  font-size: 24px;
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+}
+
+.reset {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: hsl(172, 67%, 45%);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: inherit;
+  border-radius: 0.3rem;
+  margin-top: 1rem; /* needs to be removed in desktop site */
+}
+
+@media (min-width: 800px) {
+  .reset {
+    border-collapse: collapse;
+    margin-top: 4.5rem;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

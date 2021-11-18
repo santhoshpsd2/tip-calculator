@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+ <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+<main>
+  <div class="logo">
+  <img src="./images/logo.svg" alt="logo"> </div>
+  <div class="mainsection">
+    <div class="billsection">
+      <!-- <form action="#" class="myform" name="myform"> -->
+        <div class="myform">
+  <label for="amount">Bill</label> <br>
+  <img class="dollar" src="./images/icon-dollar.svg" alt="dollar">
+  <input class="billamt" type="number" name="amount" id="amount"> <br>
+<label for="tip">Select Tip %</label><br>
+<div class="tipbuttons">
+<button value="5" class="five percent">5%</button>
+<button value="10" class="ten percent">10%</button>
+<button value="15" class="fifteen percent">15%</button>
+<button value="25" class="twentyfive percent">25%</button>
+<button value="50" class="fifty percent">50%</button>
+<input class="tipnumber" type="number" name="tip" id="tip" placeholder="Custom">
+</div>
+<label for="people">Number of People</label><br>
+<img src="./images/icon-person.svg" alt="person" class="person">
+  <input class="persons" type="number" name="people" id="people">
+<!-- </form> -->
+</div>
+</div>
+<div class="tipsection">
+  <div class="tipamount">
+ <p> Tip Amount <br>
+ <span class="pertext">/ person </span>  </p>
+  <p class="price tip">$0.00</p>
+</div>
+<div class="tipperperson">
+ <p> Total <br>
+ <span class="pertext"> / person </span> </p>
+  <p class="price totaltip">$0.00</p>
+</div>
+<button class="reset">Reset</button>
+  
+</div>
+</div>
+</main>
+</body>
+<script src="./script.js"></script>
+</html>
