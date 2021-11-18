@@ -39,7 +39,7 @@ main {
 
 @media (min-width: 800px) {
   main {
-    min-width: 800px;
+    min-width: 900px;
   }
 
   .mainsection {
