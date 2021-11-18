@@ -23,14 +23,15 @@ buttons.forEach((but,index) => {
     but.addEventListener('click',()=>{
         customtip.value = "";
         customvalue = but.value;
-        if((billamount.value != "" | billamount.value != null) && (persons.value == "" | persons.value == null)){
-            persons.value = 1;
-            tipcalculator();
-        }
+        // if((billamount.value != "" | billamount.value != null) && (persons.value == "" | persons.value == null)){
+        //     persons.value = 1;
+        //     tipcalculator();
+        // }
 
-        if(billamount.value != null && persons.value != null){
-            tipcalculator();
-        }
+        // if(billamount.value != null && persons.value != null){
+        //     tipcalculator();
+        // }
+        tipcalculator();
         
         buttons.forEach((but1,index1)=>{
             if(index === index1){
@@ -44,7 +45,7 @@ buttons.forEach((but,index) => {
 
 
 billamount.addEventListener('keyup',()=>{
-    if((persons.value != "" | persons.value != null) && (customvalue))
+    // if((persons.value != "" | persons.value != null) && (customvalue))
     tipcalculator();
 })
 
@@ -55,14 +56,14 @@ persons.addEventListener('keyup', ()=>{
 
 customtip.addEventListener('keyup', ()=>{
     customvalue = customtip.value;
-    if((billamount.value != "" | billamount.value != null) && (persons.value == "" | persons.value == null)){
-        persons.value = 1;
-        tipcalculator();
-    }
+    // if((billamount.value != "" | billamount.value != null) && (persons.value == "" | persons.value == null)){
+    //     persons.value = 1;
+    //     tipcalculator();
+    // }
 
-    if(billamount.value != null && persons.value != null){
-        tipcalculator();
-    }
+    // if(billamount.value != null && persons.value != null){
+    //     tipcalculator();
+    // }
     buttons.forEach(but => {
         but.classList.remove('active');
     })
@@ -74,7 +75,7 @@ reset.addEventListener('click', ()=>{
     customvalue = "";
     billamount.value = "";
     customtip.value = "";
-    persons.value = "";
+    persons.value = "1";
     buttons.forEach(but => {
         but.classList.remove('active');
     })
