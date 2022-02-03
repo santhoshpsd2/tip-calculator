@@ -11,26 +11,25 @@ let customvalue = 0;
 
 
 function tipcalculator(){
-    tip = (customvalue / 100) * +billamount.value;
-    totalamount = +billamount.value + tip;
-    tipperperson = (tip / +persons.value).toFixed(2);
-    totalperperson = (totalamount / +persons.value).toFixed(2);
-    tipperson.innerHTML = "$" + tipperperson;
-    tiptotal.innerHTML = "$" + totalperperson;
+    if((+billamount.value>-1) & (customvalue>-1) & (+persons.value>-1)){
+        tip = (customvalue / 100) * +billamount.value;
+        totalamount = +billamount.value + tip;
+        tipperperson = (tip / +persons.value).toFixed(2);
+        totalperperson = (totalamount / +persons.value).toFixed(2);
+        tipperson.innerHTML = "$" + tipperperson;
+        tiptotal.innerHTML = "$" + totalperperson;
+    }else{
+        alert("Please enter positive values");
+    }
+    
 }
+
+// Tip calculation for standard percentages
 
 buttons.forEach((but,index) => {
     but.addEventListener('click',()=>{
         customtip.value = "";
         customvalue = but.value;
-        // if((billamount.value != "" | billamount.value != null) && (persons.value == "" | persons.value == null)){
-        //     persons.value = 1;
-        //     tipcalculator();
-        // }
-
-        // if(billamount.value != null && persons.value != null){
-        //     tipcalculator();
-        // }
         tipcalculator();
         
         buttons.forEach((but1,index1)=>{
@@ -43,33 +42,26 @@ buttons.forEach((but,index) => {
     })   
 })
 
+// Calculate tip based on input
 
-billamount.addEventListener('keyup',()=>{
-    // if((persons.value != "" | persons.value != null) && (customvalue))
+billamount.addEventListener('input',()=>{
     tipcalculator();
 })
 
-persons.addEventListener('keyup', ()=>{
+persons.addEventListener('input', ()=>{
     if((billamount.value != "" | billamount.value != null) && (customvalue))
     tipcalculator();
 })
 
-customtip.addEventListener('keyup', ()=>{
+customtip.addEventListener('input', ()=>{
     customvalue = customtip.value;
-    // if((billamount.value != "" | billamount.value != null) && (persons.value == "" | persons.value == null)){
-    //     persons.value = 1;
-    //     tipcalculator();
-    // }
-
-    // if(billamount.value != null && persons.value != null){
-    //     tipcalculator();
-    // }
     buttons.forEach(but => {
         but.classList.remove('active');
     })
     tipcalculator();    
 })
 
+// Reset event handler
 
 reset.addEventListener('click', ()=>{
     customvalue = "";
